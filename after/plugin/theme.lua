@@ -1,5 +1,5 @@
 
-function SetupTransparentRosePineTheme(color)
+function SetupTransparentTheme(color)
 	color = color or 'rose-pine'
 	vim.cmd.colorscheme(color)
 
@@ -8,4 +8,4 @@ function SetupTransparentRosePineTheme(color)
 end
 
 
-SetupTransparentRosePineTheme()
+SetupTransparentTheme('gruvbox')
