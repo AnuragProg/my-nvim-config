@@ -27,4 +27,8 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+vim.opt.shell = 'pwsh'
+vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
+vim.opt.shellxquote = ''
+
 -- vim.opt.colorcolumn = "80"
