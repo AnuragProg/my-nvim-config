@@ -11,5 +11,6 @@ end, {desc='Telescope: Search Lines In Project'})
 -- listing all the variables and functions available in the current buffer
 vim.keymap.set('n', '<leader>pds', builtin.lsp_document_symbols, {desc='Telescope: Search Document Symbols'})
 vim.keymap.set('n', '<leader>pws', builtin.lsp_workspace_symbols, {desc='Telescope: Search Workspace Symbols'})
+vim.keymap.set('n', '<leader>ht', builtin.help_tags, {desc='Telescope: Help Tag'})
 
 -- vim.keymap.set('n', '<leader>q', builtin.diagnostics, {desc='Telescope: Diagnostics'})
