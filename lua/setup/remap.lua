@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- for netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- INFO: We are using currently oil and will be using that only for file tree
 
 -- lsp remaps
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {desc='LSP: Code Action'})
@@ -19,5 +19,12 @@ vim.keymap.set("v", "<C-k>", ":m'<-2<CR>gv=gv")
 
 
 
+-- for executing cpp files ( for competitive or short programs only, will only execute currently open file )
+-- BUG: is not complete yet
+vim.keymap.set('n', '<leader>e', function()
+    local filename = vim.api.nvim_buf_get_name(0)
+    vim.cmd(":!g++ -o main "..filename)
+    vim.cmd(":!./main")
+end)
 
 
