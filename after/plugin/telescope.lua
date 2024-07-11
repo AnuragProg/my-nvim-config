@@ -5,7 +5,11 @@ local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {desc='Telescope: Search Project Files'})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {desc='Telescope: Search Git Files'} )
 vim.keymap.set('n', '<leader>ps', function()
-    builtin.grep_string({ search = vim.fn.input("Grep > ") });
+    local input = vim.fn.input("Grep > ")
+    if input == "" then
+        return
+    end
+    builtin.grep_string({ search = input });
 end, {desc='Telescope: Search Lines In Project'})
 
 -- listing all the variables and functions available in the current buffer
