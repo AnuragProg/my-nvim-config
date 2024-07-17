@@ -11,7 +11,7 @@ require('auto-session').setup({
 
 vim.keymap.set('n', '<leader>ss', function ()
     vim.cmd('SessionSave')
-    print(vim.loop.cwd()..': Session Created')
+    print(vim.loop.cwd()..': Session Saved')
 end, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>sr', function ()
     vim.cmd('SessionRestore')
