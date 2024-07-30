@@ -7,5 +7,6 @@ return {
 	{'L3MON4D3/LuaSnip'},
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
+    {'WhoIsSethDaniel/mason-tool-installer.nvim' },
     { 'j-hui/fidget.nvim' }, -- for fidget displaying lsp load status
 }
