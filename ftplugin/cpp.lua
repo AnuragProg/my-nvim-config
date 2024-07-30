@@ -58,7 +58,7 @@ vim.keymap.set('n', '<leader>ex', function()
     vim.cmd(output_width_size..'wincmd |')
 
     vim.cmd('terminal g++ -o main '..filename..'; ./main')
-    vim.cmd('startinsert')
+    --vim.cmd('startinsert') -- not going insert mode, as navigating the output is mostly useful than being in insert mode
 end)
 
 
