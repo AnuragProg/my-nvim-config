@@ -16,10 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 
 
 -- setup plugins 
-require("lazy").setup("plugin")
+require("lazy").setup("plugin", { import = 'custom.plugins' })
 
 
 -- loading custom plugins
-require("lazy").setup({
-    {import = 'custom.plugins'}
-})
+-- require("lazy").setup({
+--     {import = 'custom.plugins'}
+-- })

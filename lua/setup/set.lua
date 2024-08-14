@@ -28,8 +28,17 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.shell = 'pwsh'
-vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
-vim.opt.shellxquote = ''
+
+local file_separator = package.config:sub(1,1)
+if file_separator == "\\" then
+    vim.opt.shell = 'pwsh'
+    vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
+    vim.opt.shellxquote = ''
+else
+    vim.opt.shell = 'bash'
+    vim.opt.shellcmdflag = '--noprofile --norc'
+    vim.opt.shellxquote = ''
+end
+
 
 -- vim.opt.colorcolumn = "80"
