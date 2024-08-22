@@ -11,6 +11,7 @@ vim.keymap.set('n', '<leader>ps', function()
     end
     builtin.grep_string({ search = input });
 end, {desc='Telescope: Search Lines In Project'})
+vim.keymap.set('n', '<leader>pl', builtin.live_grep, {desc='Telescope: Live Search Lines in Project'})
 
 -- listing all the variables and functions available in the current buffer
 vim.keymap.set('n', 'gr', builtin.lsp_references, {desc='Telescope: Quickfix references'})
