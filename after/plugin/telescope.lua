@@ -1,6 +1,5 @@
 local builtin = require('telescope.builtin')
 
-
 -- searching and navigation
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {desc='Telescope: Search Project Files'})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {desc='Telescope: Search Git Files'} )
