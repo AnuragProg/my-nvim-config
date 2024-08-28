@@ -12,6 +12,10 @@ vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, {desc='LSP: Code Action'})
 vim.keymap.set("v", "<C-j>", ":m'>+1<CR>gv=gv")
 vim.keymap.set("v", "<C-k>", ":m'<-2<CR>gv=gv")
 
+
+vim.keymap.set("n", "<leader>qn", ":cnext<CR>", {desc="QuickFix: Next Item"})
+vim.keymap.set("n", "<leader>qp", ":cprev<CR>", {desc="QuickFix: Previous Item"})
+
 -- for diagnostic
 -- vim.keymap.set('n', '<leader>dq', '<cmd>lua vim.diagnostic.setloclist()<CR>', { noremap = true, silent = true })
 -- vim.keymap.set('n', '<leader>dn', '<cmd>lua vim.diagnostic.goto_next()<CR>', {noremap = true, silent = true })
