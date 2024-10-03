@@ -34,7 +34,7 @@ require('mason-lspconfig').setup({
 
 -- default loading my language toolkit
 require('mason-tool-installer').setup({
-    ensure_installed = {'gopls', 'lua-language-server', 'python-lsp-server', 'rust-analyzer', 'typescript-language-server', 'tailwindcss-language-server'}
+    ensure_installed = {'gopls', 'lua-language-server', 'pylyzer', 'rust-analyzer', 'typescript-language-server', 'tailwindcss-language-server'}
 })
 
 local cmp = require('cmp')
