@@ -34,7 +34,7 @@ require('mason-lspconfig').setup({
 
 -- default loading my language toolkit
 require('mason-tool-installer').setup({
-    ensure_installed = {'gopls', 'lua-language-server', 'pylyzer', 'rust-analyzer', 'typescript-language-server', 'tailwindcss-language-server'}
+    ensure_installed = {'gopls', 'lua-language-server', 'python-lsp-server', 'rust-analyzer', 'typescript-language-server', 'tailwindcss-language-server'}
 })
 
 local cmp = require('cmp')
@@ -196,5 +196,30 @@ require('fidget').setup({
     path =                        -- Where Fidget writes its logs to
       string.format("%s/fidget.nvim.log", vim.fn.stdpath("cache")),
   },
+})
+
+
+--- setting up pylsp
+require('lspconfig').pylsp.setup({
+    settings = {
+        pylsp = {
+            plugins = {
+                -- formatter options
+                -- black = { enabled = true },
+                -- autopep8 = { enabled = false },
+                -- yapf = { enabled = false },
+                -- -- linter options
+                -- pylint = { enabled = true, executable = "pylint" },
+                -- pyflakes = { enabled = false },
+                pycodestyle = { enabled = false },
+                -- -- type checker
+                -- pylsp_mypy = { enabled = false },
+                -- -- auto-completion options
+                -- jedi_completion = { fuzzy = false },
+                -- -- import sorting
+                -- pyls_isort = { enabled = false },
+            }
+        }
+    },
 })
 
