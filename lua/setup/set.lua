@@ -40,5 +40,10 @@ else
     vim.opt.shellxquote = ''
 end
 
+-- start {{vimwiki config}}
+vim.o.compatible = false
+vim.cmd('filetype plugin on')
+vim.cmd('syntax enable')
+-- end {{vimwiki config}}
 
 -- vim.opt.colorcolumn = "80"
