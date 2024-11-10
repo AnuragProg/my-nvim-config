@@ -35,8 +35,8 @@ if file_separator == "\\" then
     vim.opt.shellcmdflag = '-nologo -noprofile -ExecutionPolicy RemoteSigned -command'
     vim.opt.shellxquote = ''
 else
-    vim.opt.shell = 'bash'
-    vim.opt.shellcmdflag = '--noprofile --norc'
+    vim.opt.shell = '/bin/sh'
+    -- vim.opt.shellcmdflag = '--noprofile --norc'
     vim.opt.shellxquote = ''
 end
 
