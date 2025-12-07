@@ -200,7 +200,7 @@ require('fidget').setup({
 
 
 --- setting up pylsp
-require('lspconfig').pylsp.setup({
+vim.lsp.config('pylsp', {
     settings = {
         pylsp = {
             plugins = {
